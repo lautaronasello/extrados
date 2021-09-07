@@ -34,7 +34,7 @@ export default function IconBtn({ icon, text, href, width }) {
         w='2rem'
         me='0.5rem'
       />
-      <Text>{text}</Text>
+      <Text fontWeight='bold'>{text}</Text>
     </HStack>
   );
 }

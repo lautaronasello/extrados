@@ -1,21 +1,19 @@
 body {
   margin: 0;
-  font-family: 'Fira Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: rgb(36, 36, 36) !important;
+  background: rgb(158, 44, 0) !important;
   background: linear-gradient(
-    180deg,
-    rgba(36, 36, 36, 1) 0%,
-    rgba(255, 255, 255, 1) 25%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(158, 44, 0, 1) 100%
+    0deg,
+    rgba(2, 2, 2, 1) 0%,
+    rgba(255, 255, 255, 1) 50%
   ) !important;
 }
 
 code {
-  font-family: 'Fira Sans', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .socialStack {

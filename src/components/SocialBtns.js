@@ -1,6 +1,6 @@
 import React from 'react';
 import IconBtn from './IconBtn.js';
-import { Stack, Center } from '@chakra-ui/react';
+import { Stack, Box } from '@chakra-ui/react';
 import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function SocialBtns() {
@@ -10,27 +10,27 @@ export default function SocialBtns() {
       icon: FaTwitter,
       text: 'Twitter',
       href: 'http://twitter.com/extrados_',
-      width: '7.2rem',
+      width: '7.9rem',
     },
     {
       id: 2,
       icon: FaLinkedin,
       text: 'LinkedIn',
       href: 'https://www.linkedin.com/company/extrados-software-technology',
-      width: '8rem',
+      width: '8.5rem',
     },
     {
       id: 3,
       icon: FaFacebook,
       text: 'Facebook',
       href: 'https://www.facebook.com/extrados.st',
-      width: '8.5rem',
+      width: '9rem',
     },
   ];
 
   return (
-    <Center>
-      <Stack direction={['row', 'column']} w='10rem' className='socialStack'>
+    <Box mx={['auto', 0]}>
+      <Stack direction={['row', 'column']} w='10rem'>
         {arraySocialData.map((data) => {
           return (
             <IconBtn
@@ -43,6 +43,6 @@ export default function SocialBtns() {
           );
         })}
       </Stack>
-    </Center>
+    </Box>
   );
 }

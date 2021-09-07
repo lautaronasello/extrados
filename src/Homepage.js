@@ -4,17 +4,17 @@ import {
   SimpleGrid,
   Image,
   Flex,
-  Heading,
   Box,
 } from '@chakra-ui/react';
-import React from 'react';
-import extrados from './img/logo.jpg';
+import React, { useState } from 'react';
 import title from './img/title.jpg';
 import SocialBtns from './components/SocialBtns.js';
 
 export default function Homepage() {
+  const [isViewed, setIsViewed] = useState(true);
+
   return (
-    <Container fontFamily='Fira Sans' maxW={[null, 'container.lg']}>
+    <Container fontFamily='Open Sans' maxW={[null, 'container.lg']}>
       <Flex
         color='blackAlpha.800'
         textAlign='center'
@@ -26,23 +26,32 @@ export default function Homepage() {
           <SimpleGrid
             position={['unset', 'relative']}
             columns={[1, 2]}
-            gap={['1rem', '3rem', '1rem']}
+            gap={['1rem', '0.5rem']}
             p={[null, '1rem']}
-            left='8.9rem'
+            left='9rem'
           >
-            <Image src={title} id='extrados' />
+            <Image
+              src={title}
+              id='extrados'
+              onClick={() => setIsViewed(!isViewed)}
+            />
 
             <SocialBtns />
           </SimpleGrid>
-          <Box
-            fontWeight='regular'
-            lineHeight={['1.5rem', '2rem']}
-            fontSize={['1rem', '1.5rem']}
-          >
-            Enfocados en brindar soluciones de negocios, EXTRADOS Software
-            Technology es una consultora de sistemas que se especializa en el
-            desarrollo de software y servicios de calidad, con tecnología,
-            infraestructura y recursos IT de alta capacidad y gran experiencia.
+          <Box w='100%' h='5rem'>
+            <Box
+              fontWeight='regular'
+              lineHeight={['1.5rem', '2rem']}
+              fontSize={['1rem', '1.5rem']}
+              textColor='#020202'
+              display={isViewed === false && 'none'}
+            >
+              Enfocados en brindar soluciones de negocios, EXTRADOS Software
+              Technology es una consultora de sistemas que se especializa en el
+              desarrollo de software y servicios de calidad, con tecnología,
+              infraestructura y recursos IT de alta capacidad y gran
+              experiencia.
+            </Box>
           </Box>
         </VStack>
       </Flex>
